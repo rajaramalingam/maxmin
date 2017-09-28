@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>maxmin</title>
+	<!-- // <script type="text/javascript" src="maxmin.js"></script> -->
+</head>
+<body>
+	<div class="container">
+		<div class="col" id="numbers">
+			<input type="number" id="x1" ><br>
+			<input type="number" id="x2"><br>
+			<input type="number" id="x3">
+		</div>
+		<div class="col">
+			<button onclick="maxFunction ()">maximum value</button>
+			<button onclick="minFunction()">minimum value</button>
+		</div>
+		<div class="col">
+         	<p>result : <span id="val"></span></p>
+		</div>
+	</div>
+	<!--  -->
+	<script>
+	function minFunction (){
+		var a= document.getElementById("x1").value;
+    	var b= document.getElementById("x2").value;
+		var c= document.getElementById("x3").value;
+		if (a<b && a<c) {
+			document.getElementById("val").innerHTML = a;
+		}
+		else if (b<c && b<a) {
+			document.getElementById("val").innerHTML = b ;
+		}
+		else  {
+			document.getElementById("val").innerHTML = c ;
+		}
+	}
+
+	function maxFunction (){
+		var a= document.getElementById("x1").value;
+    	var b= document.getElementById("x2").value;
+		var c= document.getElementById("x3").value;
+		if (a>b && a>c) {
+			document.getElementById("val").innerHTML = a;
+		}
+		else if (b>c && b>a) {
+			document.getElementById("val").innerHTML = b;
+		}
+		else {
+			document.getElementById("val").innerHTML = c;
+		}
+	}
+</script>
+</body>
+</html>
